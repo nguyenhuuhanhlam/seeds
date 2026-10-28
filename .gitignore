@@ -2,7 +2,14 @@ node_modules/
 dist/
 _site/
 *.log
+__pycache__/
+*.pyc
 # Dữ liệu chấm công thật — KHÔNG BAO GIỜ commit lên repo public này.
 # File mẫu ẩn danh nằm ở timekeeping/public/sample/ và được commit riêng.
+# Lưu ý: timekeeping/python/users.json là bản MẪU ẩn danh đã commit —
+# đừng ghi đè nó bằng users.json thật rồi commit; dữ liệu thật chỉ chạy local.
 *.dat
 /timekeeping/users.json
+*.txt
+!timekeeping/public/sample/*.txt
+!timekeeping/python/sample-attlog.txt

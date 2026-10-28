@@ -1,9 +1,10 @@
 # Timekeeping — Bảng công ca HC
 
-Viết lại bản Python gốc (`timekeeping_app.py` + `timekeeping_minutes.py`,
-giao diện Streamlit) thành ứng dụng web **React + Astryx, chạy hoàn toàn
-trên trình duyệt** — không server, không gửi dữ liệu đi đâu. Mọi tính toán
-chạy trong `src/lib/timekeeping.ts`, port chính xác từ bản Python.
+Viết lại bản Python gốc (xem `python/` — toàn bộ code cũ: Streamlit +
+lõi tính công, font DejaVu, dữ liệu mẫu ẩn danh) thành ứng dụng web
+**React + Astryx, chạy hoàn toàn trên trình duyệt** — không server, không
+gửi dữ liệu đi đâu. Mọi tính toán chạy trong `src/lib/timekeeping.ts`,
+port chính xác từ bản Python.
 
 ## Chạy
 

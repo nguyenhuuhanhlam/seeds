@@ -1,0 +1,17 @@
+[
+  {
+    "member_id": 101,
+    "department": "Kiến trúc",
+    "name": "Nguyễn Minh An"
+  },
+  {
+    "member_id": 102,
+    "department": "Kết cấu",
+    "name": "Trần Thu Hà"
+  },
+  {
+    "member_id": 103,
+    "department": "Kiến trúc",
+    "name": "Lê Quốc Bảo"
+  }
+]
