@@ -1,0 +1,45 @@
+/* Quy ước dự án: toàn bộ app dùng font Cascadia Mono (theo NSDT NextGen).
+   Bundle qua @fontsource để chạy offline (không phụ thuộc Google Fonts). */
+
+@import '@fontsource/cascadia-mono/400.css';
+@import '@fontsource/cascadia-mono/500.css';
+@import '@fontsource/cascadia-mono/600.css';
+@import '@fontsource/cascadia-mono/700.css';
+
+/* Ghi đè 3 biến font của theme Astryx. Rule này không nằm trong @layer nên
+   thắng các định nghĩa trong @layer astryx-theme của theme. */
+@scope ([data-astryx-theme]) {
+  :scope {
+    --font-family-body: 'Cascadia Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+    --font-family-heading: 'Cascadia Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+    --font-family-code: 'Cascadia Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+  }
+}
+
+/* Bảng chi tiết bảng công — dùng <table> thuần để giữ đúng màu nền
+   cuối tuần như bản Python (Astryx Table không có API tô màu theo dòng).
+   Màu: T7 #CCCCFF, CN #FF99CC, tiêu đề vàng #FFFF00 (giống _build_xlsx). */
+.tk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.tk-table th,
+.tk-table td {
+  border: 1px solid #000;
+  padding: 4px 6px;
+  text-align: center;
+}
+.tk-table th {
+  font-weight: 700;
+  background: #eee;
+}
+.tk-table .tk-sat td { background: #ccccff; }
+.tk-table .tk-sun td { background: #ff99cc; }
+.tk-table .tk-title td {
+  background: #ffff00;
+  font-weight: 700;
+  text-align: left;
+}
+.tk-table .tk-total td { font-weight: 700; }
+.tk-table .tk-num { font-variant-numeric: tabular-nums; }

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+_site/
+*.log
+# Dữ liệu chấm công thật — KHÔNG BAO GIỜ commit lên repo public này.
+# File mẫu ẩn danh nằm ở timekeeping/public/sample/ và được commit riêng.
+*.dat
+/timekeeping/users.json

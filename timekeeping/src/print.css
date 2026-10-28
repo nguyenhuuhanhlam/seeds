@@ -1,0 +1,35 @@
+/* Bản in / PDF — mỗi user 1 trang A4 dọc, chừa chỗ ký tên (giống _build_pdf
+   của bản Python). PDF được tạo bằng cách in từ trình duyệt (Ctrl+P /
+   "Lưu thành PDF") để tiếng Việt luôn đúng dấu với font hệ thống. */
+
+.print-page {
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.print-sign {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  text-align: center;
+}
+.print-sign .print-sign-col { flex: 1; }
+.print-sign .print-sign-name { font-weight: 700; }
+.print-sign .print-sign-note { color: #666; font-size: 11px; font-style: italic; }
+
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  body * { visibility: hidden; }
+  #print-root, #print-root * { visibility: visible; }
+  #print-root {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .print-page { page-break-after: always; margin-bottom: 0; }
+  .print-page:last-child { page-break-after: auto; }
+  .print-toolbar { display: none !important; }
+}
